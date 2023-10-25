@@ -153,4 +153,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # https://django-compressor.readthedocs.io/en/latest/quickstart/#installation
 INSTALLED_APPS += ["compressor"]
 STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
-
+COMPRESS_ENABLED = True
+COMPRESS_ROOT = BASE_DIR / 'static'
