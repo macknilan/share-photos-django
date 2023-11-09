@@ -1,4 +1,4 @@
-{% load static compress %}
+{% load static i18n compress %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@
     {% endblock javascript %}
 
     {% compress css %}
-        <link rel="stylesheet" href="{% static 'src/output.css' %}">
+        <link rel="stylesheet" href="{% static "src/output.css" %}">
     {% endcompress %}
 
 </head>
