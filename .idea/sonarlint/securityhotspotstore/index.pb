@@ -1,22 +1,6 @@
 
-G
-share_photos_dj/urls.py,f/8/f8b07e9616dad215af5b94bb5c48b6b9818d33c1
 >
 pyproject.toml,5/d/5d07e7d72637aa0d59c89d381fe6dc4cf46e2491
-K
-share_photos_dj/settings.py,f/d/fdd5dca5c9378d3d766ac17c427d98af40eacc8d
-C
-a_posts/__init__.py,a/7/a7c05e4708570de291237c9249bda7c97f88e736
-@
-a_posts/admin.py,0/d/0df15cf77ed50b447484c710b465a378ddb88e24
-?
-a_posts/apps.py,9/b/9bf2e9c8c817ecffa770bc5bdaa147ba2d9295a1
-A
-a_posts/models.py,4/9/49224c78e1105b1d8fd6767fee9870c2d0b5d3c9
-@
-a_posts/tests.py,d/2/d211202452b78f7a44d1cc4a3969c30dc534dbec
-@
-a_posts/views.py,3/0/304f8476f80a8e873a8c381d9037056bd6e41c17
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 :
@@ -26,17 +10,57 @@ E
 static/src/output.css,6/1/619a4382918866d4a126c213578c8a5d7848407c
 9
 	manage.py,3/1/3156ad13e4d695cd526bbb7b031016ecba842270
-D
-static/src/input.css,5/e/5ebf9896bb76cdcd66090785144a26689fdb850d
 B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
-C
-templates/base.html,d/a/da7c237b85a69c00a9ab8c189bf63e22070fcac3
-I
-templates/pages/home.html,5/5/559d309b80f370a1fa04811fd9e6b8153b2fca7b
-@
-requirements.txt,1/9/19359a61ae2446b51b549167b014da2fcf265768
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 L
 tw_css-instalations-notes.md,d/a/da2024de8e7067e5b512ad26c88401c2eff03bd2
+I
+envs_example/local/django,7/3/73b4c75f26dfba5102986efd35f7b7575331fa2b
+K
+envs_example/local/postgres,5/f/5f555f2813b4de993c1f9f7e3d3107c00b7dcc37
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+E
+requirements/base.txt,a/5/a53d00307871abc09608b3e4fdabb0cfc4ae7d9b
+F
+requirements/local.txt,8/8/8892fad390a2a63633fc1995fd5948ab29910d63
+P
+ share_photos_dj/a_posts/admin.py,c/9/c9fae877cfe63225a2d76712b30a04b266f3c58a
+O
+share_photos_dj/a_posts/apps.py,f/3/f34be20631fd194e47dce9ead4a17a399cc11a45
+Q
+!share_photos_dj/a_posts/models.py,d/7/d75bb4d18007b0fdbf4461bdc91e5611cf88d296
+P
+ share_photos_dj/a_posts/tests.py,1/e/1ec7718e073179eacae0c6a6cff39b1aad578f5d
+P
+ share_photos_dj/a_posts/views.py,e/1/e1cd0583408fdfec2ccd13e4cb18fa6e46a996ca
+G
+config/settings/base.py,6/b/6bf9cb95cce0913f8a34ceb73e143ea3918f740e
+H
+config/settings/local.py,a/4/a4b372c97b98db3f4bc440cd12ac5d9fa4cbaf7c
+>
+config/urls.py,4/5/45b243d494ecd78f07818174452843086c64845d
+>
+config/wsgi.py,7/a/7a4aaa54a3efb112f8e2592ed1507e33ab6a7b8c
+>
+config/asgi.py,5/9/597ed58946079f795070145abd2ba40aaf51a0ae
+S
+#share_photos_dj/templates/base.html,b/9/b97066dd63f98f698014b16bd4f2e04114031c98
+Y
+)share_photos_dj/templates/pages/home.html,5/d/5d0d0d2ae2e89e93e411feaac8f73efd57f70ed6
+O
+config/settings/settings_OLD.py,c/2/c2a1613be4ad25a6d8281a8b9842cc1be9b2e02d
+S
+#share_photos_dj/contrib/__init__.py,f/d/fd1c511191e94b4516f7dfafda0927bfa5318ba0
+Y
+)share_photos_dj/contrib/sites/__init__.py,d/6/d6cdf1f97ed1b415ead200915b7fd98ed0f72d34
+d
+4share_photos_dj/contrib/sites/migrations/__init__.py,3/8/38b76ad11869d1f0e8befdcc6d358c1192530614
+Q
+!share_photos_dj/utils/__init__.py,2/e/2e1c03e16671110083a16a51f33488402cbb4b90
+T
+$share_photos_dj/static/src/input.css,2/6/268173830fc2087b7d0bd15b67a665449ec51bfe
+U
+%share_photos_dj/static/src/output.css,1/c/1cabb4763511802c1c20bd9ad15616aa5fccdd04
