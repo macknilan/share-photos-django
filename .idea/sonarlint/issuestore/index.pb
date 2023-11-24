@@ -6,8 +6,6 @@
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-E
-static/src/output.css,6/1/619a4382918866d4a126c213578c8a5d7848407c
 9
 	manage.py,3/1/3156ad13e4d695cd526bbb7b031016ecba842270
 B
@@ -66,3 +64,27 @@ T
 $share_photos_dj/static/src/input.css,2/6/268173830fc2087b7d0bd15b67a665449ec51bfe
 U
 %share_photos_dj/static/src/output.css,1/c/1cabb4763511802c1c20bd9ad15616aa5fccdd04
+^
+.share_photos_dj/templates/includes/navbar.html,a/a/aa599b1f48084487ad03fd0d2716f74acdd7ec15
+\
+,share_photos_dj/templates/includes/hero.html,6/c/6cac9e86793b4227a96ee4414974ebd556c02680
+[
++share_photos_dj/templates/a_posts/home.html,e/e/ee2c5dc7d5578d3d6f160a2ad277dfd54dafd244
+X
+(share_photos_dj/templates/layouts/a.html,9/4/944c0ecfb008a5f439c6f7e631e3698c9b0df3fb
+_
+/share_photos_dj/templates/includes/sidebar.html,a/7/a73ae358b5fa46dd64b52a36f49054187f62d22d
+O
+share_photos_dj/utils/models.py,9/e/9e44e6b89b9f49d32ad327d8d81dd4dffdeb4bdc
+h
+8share_photos_dj/contrib/sites/migrations/0001_initial.py,1/b/1b51ed2e4b5fae829fcfdee087d13e6cdc658960
+b
+2share_photos_dj/templates/a_posts/post_create.html,0/e/0e510d8a8b60db1440433ee6c68e3b464f522606
+X
+(share_photos_dj/templates/layouts/b.html,9/c/9c79652bc00e5aabfac90870ce4c03d07e73dd4d
+M
+share_photos_dj/a_posts/forms,d/8/d827f24c9c1c3603e1e1b573cb201c614c8603d2
+Y
+)share_photos_dj/a_posts/forms/__init__.py,1/8/187f10ae732fa790eca78ac7d7697b18c78605b0
+\
+,share_photos_dj/a_posts/forms/forms_posts.py,7/1/71529602182f661c43bbd88d281cc58d5d6dcc5e

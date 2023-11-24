@@ -7,19 +7,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Share photos with django project" />
-    <meta name="author" content="Rodolfo" />
+    <meta name="description" content="Share photos with django project"/>
+    <meta name="author" content="Rodolfo"/>
 
     <title>{% block title %}Django + Tailwind CSS + Flowbite{% endblock title %}</title>
     <script src="https://kit.fontawesome.com/6f83d1d3e1.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/png" href="{% static "images/favicons/favicon.ico" %}">
     {% block javascript %}
-    <!-- {# Placed at the top of the document so pages load faster with defer #} -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js" crossorigin="anonymous"></script>
-    <!-- My stuff: Third-party javascript libraries go here -->
+        <!-- {# Placed at the top of the document so pages load faster with defer #} -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"
+                crossorigin="anonymous"></script>
+        <!-- My stuff: Third-party javascript libraries go here -->
 
-    <!-- place project specific Javascript in this file -->
-    {% comment %} {# <script defer src="{% static "js/sidebar.js" %}"></script> #} {% endcomment %}
+        <!-- place project specific Javascript in this file -->
+        {% comment %} {# <script defer src="{% static "js/sidebar.js" %}"></script> #} {% endcomment %}
     {% endblock javascript %}
 
     {% compress css %}
@@ -31,228 +32,13 @@
 <body class="bg-gray-100">
 
     <header>
-        <nav class="border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800">
-            <div class="mx-auto flex max-w-screen-xl flex-wrap items-center p-4">
-                <!-- LOGO -->
-                <div class="flex grow items-center">
-                    <a href="#" class="flex">
-                        <img src="{% static "images/logo.svg" %}" class="mr-3 h-8" alt="Logo" title="Logo"/>
-                        <span class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">: - |</span>
-                    </a>
-                </div>
-                <!-- /LOGO -->
-                <!-- USER MENU -->
-                <div class="flex items-center pl-5 md:order-2">
-                    <button type="button"
-                            class="mr-3 flex rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-300 md:mr-0 dark:focus:ring-gray-600"
-                            id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
-                            data-dropdown-placement="bottom">
-                        <span class="sr-only">Open user menu</span>
-                        <img class="h-8 w-8 rounded-full" src="{% static "images/users/morty_01.png" %}" alt="Morty"
-                             title="Morty">
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div class="z-50 my-4 hidden list-none rounded-lg bg-white text-base shadow divide-y divide-gray-100 dark:divide-gray-600 dark:bg-gray-700"
-                         id="user-dropdown">
-                        <div class="px-4 py-3">
-                            <span class="block text-sm text-gray-900 dark:text-white">Morty Smit</span>
-                            <span class="block truncate text-sm text-gray-500 dark:text-gray-400">morty_smith@mail.com</span>
-                        </div>
-                        <ul class="py-2" aria-labelledby="user-menu-button">
-                            <li>
-                                <a href="#"
-                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                    out</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /USER MENU -->
-                <button data-collapse-toggle="navbar-solid-bg" type="button"
-                        class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 md:hidden dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="navbar-solid-bg" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                         viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M1 1h15M1 7h15M1 13h15"/>
-                    </svg>
-                </button>
-                <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-                    <ul class="mt-4 flex flex-col rounded-lg bg-gray-50 font-medium dark:border-gray-700 dark:bg-gray-800 md:space-x-8 md:mt-0 md:flex-row md:border-0 md:bg-transparent md:dark:bg-transparent">
-                        <li>
-                            <a href="#"
-                               class="block rounded bg-blue-700 py-2 pr-4 pl-3 text-white dark:bg-blue-600 md:bg-transparent md:p-0 md:text-blue-700 md:dark:bg-transparent md:dark:text-blue-500"
-                               aria-current="page">Home</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                               class="block rounded py-2 pr-4 pl-3 text-gray-900 hover:bg-gray-100 dark:text-white md:border-0 md:p-0 dark:hover:bg-gray-700 dark:hover:text-white md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500">Create Posts</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        {% include "includes/navbar.html" %}
     </header>
-    <!-- HERO -->
-    <section class="dark:bg-gray-900 bg-cover bg-[url('https://live.staticflickr.com/65535/49909538937_3255dcf9e7_b.jpg')]"> <!-- bg-white -->
-        <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-100 dark:text-white md:text-5xl lg:text-6xl">
-                We invest in the world’s potential
-            </h1>
-            <p class="mb-8 text-lg font-normal text-gray-200 dark:text-gray-200 sm:px-16 lg:text-xl xl:px-48">Here at
-                Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and
-                drive economic growth.</p>
-        </div>
-    </section>
-    <!-- /HERO -->
+
     <main class="mt-4 px-4">
-        <div class="container mx-auto flex max-w-5xl flex-wrap justify-around"> <!-- justify-between -->
-            <section>
-                <!-- CARDS -->
-                <article class="mb-4 grow rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800 md:max-w-sm md:grow-0 lg:max-w-xl">
-                    <!-- md:max-w-md -->
-                    <div class="flex h-14 items-center justify-between px-4">
-                        <h3 class="mr-1 text-start leading-5">Little Jedi</h3>
-                        <div class="truncate text-sm text-gray-400">flickr
-                            <a href="#" class="ml-1 hover:underline" target="_blank">@John Doe</a>
-                        </div>
-                    </div>
-                    <figure>
-                        <a href="#">
-                            <img src="{% static "images/image-1.jpg" %}" alt="" title=""/>
-                        </a>
-                    </figure>
-                    <div class="p-5">
-                        <a class="mb-4 flex items-center gap-1" href="">
-                            <img class="h-8 w-8 rounded-full object-cover"
-                                 src="{% static "images/users/morty_01.png" %}" alt="" title="">
-                            <span class="font-bold hover:underline">Morty</span>
-                            <span class="text-sm text-gray-400">@morty_smith</span>
-                        </a>
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Noteworthy technology acquisitions 2021
-                        </h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">&nbsp;</p>
-                        <div class="mb-5 flex flex-wrap items-center">
-                            <span class="mr-2 rounded-full bg-blue-100 text-xs font-medium text-blue-800 px-2.5 py-0.5 dark:bg-blue-900 dark:text-blue-300">Animals</span>
-                            <span class="mr-2 rounded-full bg-blue-100 text-xs font-medium text-blue-800 px-2.5 py-0.5 dark:bg-blue-900 dark:text-blue-300">Black & White</span>
-                        </div>
-                        <div class="flex flex-wrap items-center justify-evenly px-2 text-sm sm:justify-between">
-                            <a class="font-bold hover:underline" href="">
-                                Comments
-                                <span class="ml-1 font-light text-gray-500">3</span>
-                            </a>
-                            <div class="flex items-center gap-4 [&>a:hover]:underline">
-                                <div class="flex items-center gap-1">
-                                                <span><i class="fa-sharp fa-solid fa-heart" style="color: #ff0000;"></i>
-                                                1
-                                                </span>
-                                </div>
-                                <a href="">Like</a>
-                                <a href="">Edit</a>
-                                <a href="">Delete</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <!-- ASIDE DE CATEGORIAS -->
-            <aside class="w-full md:w-5/12 lg:w-4/12">
-                <section>
-                    <article class="mb-4 rounded-lg border border-gray-200 bg-white p-5 shadow dark:border-gray-700 dark:bg-gray-800 "> <!-- md:w-5/12 lg:w-4/12 -->
-                        {# <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> #}
-                        {# Categories #}
-                        {# </h5> #}
-                        <ul class="text-left text-lg">
-                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                <i class="text-xl fa-solid fa-mountain-sun"></i>
-                                <a href="#">Landscape</a>
-                            </li>
-                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                <i class="text-xl fa-sharp fa-solid fa-dog"></i>
-                                <a href="#">Animals</a>
-                            </li>
-                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                <i class="text-xl fa-sharp fa-solid fa-person"></i>
-                                <a href="#">People</a>
-                            </li>
-                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                <i class="text-xl fa-sharp fa-solid fa-city"></i>
-                                <a href="#">Urban</a>
-                            </li>
-                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                <i class="text-xl fa-solid fa-circle-half-stroke"></i>
-                                <a href="#">Black & White</a>
-                            </li>
-                        </ul>
-                    </article>
-                    <article class=" rounded-lg border border-gray-200 bg-white p-5 shadow dark:border-gray-700 dark:bg-gray-800 "> <!-- md:w-5/12 lg:w-4/12 -->
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                             <i class="fa-sharp fa-solid fa-fire" style="color: #e25822;"></i>&nbsp;Top Posts
-                        </h5>
-                        <ul class="text-left text-lg">
-                            <li>
-                                <a href="#" class="flex justify-evenly items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                    <img class="w-10 h-10 rounded" src="{% static "images/users/morty_01.png" %}" alt="Default avatar" title="Default avatar">
-                                    <img class="w-8 h-8 rounded-full" src="{% static "images/users/morty_02.png" %}" alt="Small avatar" title="Default avatar">
-                                    <span class="font-bold text-sm mr-1">Animals</span>
-                                    <span class="text-sm font-light text-grey-500 shrink-0"> 8 <span class="">Likes</span> / 2</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex justify-evenly items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                    <img class="w-10 h-10 rounded" src="{% static "images/users/morty_01.png" %}" alt="Default avatar" title="Default avatar">
-                                    <img class="w-8 h-8 rounded-full" src="{% static "images/users/morty_02.png" %}" alt="Small avatar" title="Default avatar">
-                                    <span class="font-bold text-sm mr-1">Animals</span>
-                                    <span class="text-sm font-light text-grey-500 shrink-0"> 8 <span class="">Likes</span> / 2</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </article>
-                    <article class=" rounded-lg border border-gray-200 bg-white p-5 shadow dark:border-gray-700 dark:bg-gray-800 "> <!-- md:w-5/12 lg:w-4/12 -->
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                             <i class="fa-solid fa-heart" style="color: #ff0000;"></i>&nbsp;Top Comments
-                        </h5>
-                        <ul class="text-left text-lg">
-                            <li>
-                                <a href="#" class="flex justify-evenly items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                    <img class="w-8 h-8 rounded-full" src="{% static "images/users/morty_02.png" %}" alt="Small avatar" title="Default avatar">
-                                    <span class="font-bold text-sm mr-1">Homer: Comment laskdjf ...</span>
-                                    <span class="text-sm font-light text-grey-500 shrink-0"> 8 <span class="">Likes</span> / 2</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex justify-evenly items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
-                                    <img class="w-8 h-8 rounded-full" src="{% static "images/users/morty_02.png" %}" alt="Small avatar" title="Default avatar">
-                                    <span class="font-bold text-sm mr-1">Homer: Comment laskdjf ...</span>
-                                    <span class="text-sm font-light text-grey-500 shrink-0"> 8 <span class="">Likes</span> / 2</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-            </aside>
-
-        </div>
+        {% block layout %}
+        {% endblock layout %}
     </main>
-
-    {#    <div class="container mx-auto mt-4 px-4">#}
-    {#        {% block content %}#}
-    {#        {% endblock content %}#}
-    {#    </div>#}
 
     {% comment %} {# <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script> #} {% endcomment %}
 

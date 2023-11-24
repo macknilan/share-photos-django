@@ -1,0 +1,55 @@
+{% extends "layouts/a.html" %}
+{% load static i18n %}
+{% block content %}
+
+    {% for post in posts %}
+                <!-- CARDS -->
+                <article
+                        class="mb-4 grow rounded-lg border border-gray-200 bg-white shadow-xl dark:border-gray-700 dark:bg-gray-800 md:max-w-sm md:grow-0 lg:max-w-xl">
+                    <!-- md:max-w-md -->
+                    <div class="flex h-14 items-center justify-between px-4">
+                        <h3 class="mr-1 text-start leading-5">{{ post.title }}</h3>
+                        <div class="truncate text-sm text-gray-400">flickr
+                            <a href="#" class="ml-1 hover:underline" target="_blank">@John Doe</a>
+                        </div>
+                    </div>
+                    <figure>
+                        <a href="#">
+                            <img src={{ post.image }} alt="{{ post.title }}" title="{{ post.title }}"/>
+                        </a>
+                    </figure>
+                    <div class="p-5">
+                        <a class="mb-4 flex items-center gap-1" href="">
+                            <img class="h-8 w-8 rounded-full object-cover"
+                                 src="{% static "images/users/morty_01.png" %}" alt="" title="">
+                            <span class="font-bold hover:underline">Morty</span>
+                            <span class="text-sm text-gray-400">@morty_smith</span>
+                        </a>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            {{ post.title }}
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">&nbsp{{ post.body }}</p>
+                        <div class="mb-5 flex flex-wrap items-center">
+                            <span class="mr-2 rounded-full bg-blue-100 text-xs font-medium text-blue-800 px-2.5 py-0.5 dark:bg-blue-900 dark:text-blue-300">Animals</span>
+                            <span class="mr-2 rounded-full bg-blue-100 text-xs font-medium text-blue-800 px-2.5 py-0.5 dark:bg-blue-900 dark:text-blue-300">Black & White</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-evenly px-2 text-sm sm:justify-between">
+                            <a class="font-bold hover:underline" href="">
+                                Comments
+                                <span class="ml-1 font-light text-gray-500">3</span>
+                            </a>
+                            <div class="flex items-center gap-4 [&>a:hover]:underline">
+                                <div class="flex items-center gap-1">
+                                    <span><i class="fa-sharp fa-solid fa-heart" style="color: #ff0000;"></i>
+                                        1
+                                    </span>
+                                </div>
+                                <a href="">Like</a>
+                                <a href="">Edit</a>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+    {% endfor %}
+{% endblock %}

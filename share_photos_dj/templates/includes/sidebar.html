@@ -1,0 +1,91 @@
+<!-- templates/includes/sidebar.html -->
+{% load static i18n %}
+            <aside class="w-full md:w-5/12 lg:w-4/12">
+                <section>
+                    <article
+                            class="mb-4 rounded-lg border border-gray-200 bg-white p-5 shadow-xl dark:border-gray-700 dark:bg-gray-800">
+                        <!-- md:w-5/12 lg:w-4/12 -->
+                        {# <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> #}
+                        {# Categories #}
+                        {# </h5> #}
+                        <ul class="text-left text-lg">
+                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                <i class="text-xl fa-solid fa-mountain-sun"></i>
+                                <a href="#">Landscape</a>
+                            </li>
+                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                <i class="text-xl fa-sharp fa-solid fa-dog"></i>
+                                <a href="#">Animals</a>
+                            </li>
+                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                <i class="text-xl fa-sharp fa-solid fa-person"></i>
+                                <a href="#">People</a>
+                            </li>
+                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                <i class="text-xl fa-sharp fa-solid fa-city"></i>
+                                <a href="#">Urban</a>
+                            </li>
+                            <li class="flex items-center rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                <i class="text-xl fa-solid fa-circle-half-stroke"></i>
+                                <a href="#">Black & White</a>
+                            </li>
+                        </ul>
+                    </article>
+                    <article
+                            class="mb-4 rounded-lg border border-gray-200 bg-white p-5 shadow-xl dark:border-gray-700 dark:bg-gray-800">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <i class="fa-sharp fa-solid fa-fire" style="color: #e25822;"></i>&nbsp;Top Posts
+                        </h5>
+                        <ul class="text-left text-lg">
+                            <li>
+                                <a href="#"
+                                   class="flex items-center justify-evenly rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                    <img class="h-10 w-10 rounded" src="{% static "images/users/morty_01.png" %}"
+                                         alt="Default avatar" title="Default avatar">
+                                    <img class="h-8 w-8 rounded-full" src="{% static "images/users/morty_02.png" %}"
+                                         alt="Small avatar" title="Default avatar">
+                                    <span class="mr-1 text-sm font-bold">Animals</span>
+                                    <span class="shrink-0 text-sm font-light text-grey-500"> 8 <span class="">Likes</span> / 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                   class="flex items-center justify-evenly rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                    <img class="h-10 w-10 rounded" src="{% static "images/users/morty_01.png" %}"
+                                         alt="Default avatar" title="Default avatar">
+                                    <img class="h-8 w-8 rounded-full" src="{% static "images/users/morty_02.png" %}"
+                                         alt="Small avatar" title="Default avatar">
+                                    <span class="mr-1 text-sm font-bold">Animals</span>
+                                    <span class="shrink-0 text-sm font-light text-grey-500"> 8 <span class="">Likes</span> / 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                    <article
+                            class="rounded-lg border border-gray-200 bg-white p-5 shadow-xl dark:border-gray-700 dark:bg-gray-800">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>&nbsp;Top Comments
+                        </h5>
+                        <ul class="text-left text-lg">
+                            <li>
+                                <a href="#"
+                                   class="flex items-center justify-evenly rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                    <img class="h-8 w-8 rounded-full" src="{% static "images/users/morty_02.png" %}"
+                                         alt="Small avatar" title="Default avatar">
+                                    <span class="mr-1 text-sm font-bold">Homer: Comment laskdjf ...</span>
+                                    <span class="shrink-0 text-sm font-light text-grey-500"> 8 <span class="">Likes</span> / 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                   class="flex items-center justify-evenly rounded-md py-3 space-x-3 px-2.5 hover:bg-neutral-100">
+                                    <img class="h-8 w-8 rounded-full" src="{% static "images/users/morty_02.png" %}"
+                                         alt="Small avatar" title="Default avatar">
+                                    <span class="mr-1 text-sm font-bold">Homer: Comment laskdjf ...</span>
+                                    <span class="shrink-0 text-sm font-light text-grey-500"> 8 <span class="">Likes</span> / 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </aside>

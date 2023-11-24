@@ -20,12 +20,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.views import defaults as default_views
-from share_photos_dj.a_posts.views import home_view
+from share_photos_dj.a_posts.views import home_view, post_create_view
 
 urlpatterns = (
     [
+        # path(settings.ADMIN_URL, admin.site.urls),
         path("admin/", admin.site.urls),
         path("", home_view, name="home"),
+        path("post/create/", post_create_view, name="post-create"),
     ]
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -96,12 +96,14 @@ celerybeat-schedule
 celerybeat.pid
 
 # Environments
-.venv
+.env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+.venv
 venv/
+env/
 ENV/
 
 # Spyder project settings

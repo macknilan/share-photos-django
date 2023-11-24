@@ -17,7 +17,7 @@ env = environ.Env()
 print(f"BASE_DIR -> {BASE_DIR}")
 print(f"APPS_DIR -> {APPS_DIR}")
 
-READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=True)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(BASE_DIR / ".env"))
@@ -56,11 +56,11 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "sandbox_db",
-        "USER": "sandbox_user",
-        "PASSWORD": "sandbox_user_2022",
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
+        "NAME": env("POSTGRES_DB"),
+        "USER": env("POSTGRES_USER"),
+        "PASSWORD": env("POSTGRES_PASSWORD"),
+        "HOST": env("POSTGRES_HOST"),
+        "PORT": env("POSTGRES_PORT")
     }
 }
 
@@ -87,7 +87,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
-    # "django.forms",
+    "django.forms",
 ]
 
 THIRD_PARTY_APPS = []
@@ -112,9 +112,9 @@ AUTHENTICATION_BACKENDS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
 # AUTH_USER_MODEL = "users.User"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = "users:redirect"
+# LOGIN_REDIRECT_URL = "users:redirect"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
-LOGIN_URL = "account_login"
+# LOGIN_URL = "account_login"
 
 # PASSWORDS
 # ------------------------------------------------------------------------------
@@ -261,10 +261,12 @@ LOGGING = {
 
 # Celery
 # ------------------------------------------------------------------------------
+# TODO:
 
 
 # django-allauth
 # ------------------------------------------------------------------------------
+# TODO:
 
 
 # django-compressor
@@ -275,4 +277,6 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 COMPRESS_ENABLED = True
 # COMPRESS_ROOT = str(APPS_DIR / "static")
 
+
 # Your stuff...
+# TODO:
