@@ -88,3 +88,5 @@ Y
 )share_photos_dj/a_posts/forms/__init__.py,1/8/187f10ae732fa790eca78ac7d7697b18c78605b0
 \
 ,share_photos_dj/a_posts/forms/forms_posts.py,7/1/71529602182f661c43bbd88d281cc58d5d6dcc5e
+b
+2share_photos_dj/a_posts/migrations/0001_initial.py,f/8/f84270a485420ce229f008024c85a681df7a943b

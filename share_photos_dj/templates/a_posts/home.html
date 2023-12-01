@@ -10,7 +10,7 @@
                     <div class="flex h-14 items-center justify-between px-4">
                         <h3 class="mr-1 text-start leading-5">{{ post.title }}</h3>
                         <div class="truncate text-sm text-gray-400">flickr
-                            <a href="#" class="ml-1 hover:underline" target="_blank">@John Doe</a>
+                            <a href="{{ post.link }}" class="ml-1 hover:underline" target="_blank">@{{ post.artist }}</a>
                         </div>
                     </div>
                     <figure>

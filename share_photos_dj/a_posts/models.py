@@ -28,6 +28,8 @@ class Post(RootBaseModel):
     is_draft = models.BooleanField(_("is_draft"), default=False)
     publish_date = models.DateTimeField(_("published_date"), auto_now=False, auto_now_add=False, null=True, blank=True)
     url = models.SlugField(_("url"), max_length=255, null=True, blank=True)  # unique=True
+    link = models.URLField(_("link"), max_length=500)
+    artist = models.CharField(_("artist"), max_length=500)
     objects = models.Manager()  # The default manager
     published = PostLet()  # The Post Manager manager
 
